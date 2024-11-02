@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-auto-rows: 50px;
+    gap: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #555;
+    transition: box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.circle.glow {
+    background-color: #ffdd00;
+    box-shadow: 0 0 20px #ffdd00, 0 0 40px #ffdd00;
+}
